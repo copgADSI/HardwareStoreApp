@@ -1,0 +1,125 @@
+
+:root {
+  /* ===== Colors ===== */
+  --body-color: #E4E9F7;
+  --sidebar-color: #FFF;
+  --primary-color: #4fe222;
+  --primary-color-rgba: rgba(79, 226, 34, 1);
+  --primary-color-light: #F6F5FF;
+  --toggle-color: #DDD;
+  --text-color: #707070;
+
+  /* ====== Transition ====== */
+  --tran-03: all 0.2s ease;
+  --tran-03: all 0.3s ease;
+  --tran-04: all 0.3s ease;
+  --tran-05: all 0.3s ease;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--body-color);
+  transition: var(--tran-05);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+::selection {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+#btn__primary {
+  background: var(--text-color);
+  margin: 2px;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  color: var(--primary-color-light);
+}
+
+#btn__primary:hover {
+  background: var(--primary-color);
+
+}
+
+.navLink {
+  color: var(--body-color);
+  text-decoration: none;
+  margin: 10px;
+  padding: 10px;
+}
+
+/* .navLink:hover {
+  text-decoration: none;
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+  border-radius: 5px;
+  transition: 0.4s ease;
+} */
+
+.active_ {
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  text-decoration: none;
+  margin: 10px;
+  padding: 10px;
+}
+
+.active_:hover {
+  color: var(--primary-color);
+  transition: 1s ease;
+}
+
+a {
+  color: var(--text-color);
+  padding: 20px;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+.img_carousel {
+  height: 450px;
+  max-height: 400;
+}
+
+h3 {
+  padding: 10px;
+  background: var(--primary-color);
+  border-radius: 20px;
+}
+
+#main__navbar {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  border: #000000 1px solid;
+
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 991px) {
+  .active {
+    border: none;
+    padding: 30px;
+  }
+
+  .navLink {
+    border: none;
+  }
+
+  li {
+    padding: 10px;
+  }
+
+  #main__navbar {
+    text-align: center;
+  }
+
+}
