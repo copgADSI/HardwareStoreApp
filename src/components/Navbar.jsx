@@ -25,22 +25,26 @@ const Navbar = () => {
                 </div>
                 <div className="flex items-center justify-between flex-grow pl-12">
                     <div className="flex items-center space-x-6 ">
+                        <NavLink to="/"
+                            className="text-gray-200 hover:text-white transition" >
+                            inicio
+                        </NavLink>
                         <NavLink to="tienda"
                             className="text-gray-200 hover:text-white transition" >
                             productos
                         </NavLink>
-                        <NavLink to="tienda"
+                        <NavLink to="/acerca-de-nosotros"
                             className="text-gray-200 hover:text-white transition" >
-                            mis compras
+                            contáctanos
                         </NavLink>
-                        <NavLink to="v"
+                        <NavLink to="/contactanos"
                             className="text-gray-200 hover:text-white transition" >
                             contáctanos
                         </NavLink>
                     </div>
 
                     {
-                        !localStorage.getItem('access_toker')
+                        localStorage.getItem('access_toker') !== null
                         &&
                         <Link
                             to="iniciar-sesion"

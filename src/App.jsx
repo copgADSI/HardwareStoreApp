@@ -1,8 +1,10 @@
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import './App.css';
+import ContactPage from './components/ContactPage';
 import Footer from './components/Footer';
 import Navigation from './layout/Navigation';
+import AboutUsPage from './pages/AboutUsPage';
 import ChairsPage from './pages/ChairsPage';
 import ComponentsPage from './pages/ComponentsPage';
 import FullPCPage from './pages/FullPCPage';
@@ -47,6 +49,8 @@ function App() {
             <Route path='/combo-completo' element={<FullPCPage />} />
             <Route path='/mouseGamers' element={<FullPCPage />} />
             <Route path='/componentes' element={<ComponentsPage />} />
+            <Route path='/acerca-de-nosotros' element={<AboutUsPage />} />
+            <Route path='/contactanos' element={<ContactPage />} />
             <Route
               path="*"
               element={<Navigate to="/" replace />}
